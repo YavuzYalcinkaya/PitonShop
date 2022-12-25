@@ -33,7 +33,7 @@ const Products = () => {
         </div>
 
         <div>
-          <button className="bg-slate-50 font-bold text-black px-5 py-2 rounded-full mr-8">
+          <button className="bg-slate-50 font-bold text-black px-6 py-2 rounded-full mr-8">
             Logout
           </button>
         </div>
@@ -42,13 +42,12 @@ const Products = () => {
       <div className="flex flex-row justify-center items-center mt-40 ">
          
         <div className="border rounded-lg h-[22rem] w-56 mt-10">
-           <CiHeart className=" relative left-[12rem] top-10"/>
+           <CiHeart className=" relative text-2xl left-[12rem] top-10"/>
            <div className="border rounded-lg flex justify-center h-24 items-center mt-10 mr-5 ml-5">
             image
            </div>
            <div className="font-bold mt-8 flex justify-center">name</div>
-           <hr className="mt-10" />
-           <div className="flex justify-center text-blue-700 font-bold mt-10">35 $</div>
+           <div className=" border-t-2 border-gray-300 py-2 flex justify-center text-blue-700 font-bold mt-10">35 $</div>
         </div>
       </div>
     </>

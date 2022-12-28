@@ -1,24 +1,15 @@
 import { CiHeart } from "react-icons/ci";
-<<<<<<< HEAD
 import { AiTwotoneHeart } from "react-icons/ai";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, {useState} from "react";
+import React from "react";
 
-const productDetail = ({products}) => { 
-  const [specialproducts, setSpecialProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
-
-=======
-import Image from "next/image";
-import { useRouter } from "next/router";
 
 const productDetail = ({ products }) => { 
   const router = useRouter();
 
   console.log(products);
->>>>>>> 848a8b09cde704320822f56616c143d36610fb13
+
 
   const productsPage = () => {
     router.push("/products")
@@ -27,52 +18,7 @@ const productDetail = ({ products }) => {
   const logout = () => {
     router.push("../Auth/login");
   };
-<<<<<<< HEAD
 
-  const likeProduct = (productID, productLikes) => {
-    const url =
-      productLikes === 0
-        ? "https://assignment-api.piton.com.tr/api/v1/product/like"
-        : "https://assignment-api.piton.com.tr/api/v1/product/unlike";
-
-    axios.post(
-      `${url}`,
-      {
-        productId: productID,
-      },
-      {
-        headers: {
-          "access-token": `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyZW50cnlAZ21haWwuY29tIiwiaWF0IjoxNjcyMDU5NDY0LCJleHAiOjE2OTc5Nzk0NjR9.3_lb2kYIgQpZMdKT3uwcrqrioxXwJ8tYZAqHpUz1B-8`,
-        },
-      }
-    );
-
-    fetchData();
-  };
-
-  React.useEffect(() => {
-    fetchData();
-  }, []);
-
-  async function fetchData() {
-    const res = await fetch(
-      "https://assignment-api.piton.com.tr/api/v1/product/all",
-      {
-        headers: {
-          "access-token": `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyZW50cnlAZ21haWwuY29tIiwiaWF0IjoxNjcyMDU5NDY0LCJleHAiOjE2OTc5Nzk0NjR9.3_lb2kYIgQpZMdKT3uwcrqrioxXwJ8tYZAqHpUz1B-8`,
-        },
-      }
-    );
-    const data = await res.json();
-    setSpecialProducts(data);
-    setIsLoading(false);
-  }
-
-  if (isLoading) {
-    return <div className="flex text-2xl justify-center mt-40 items-center font-bold">Yükleniyor...</div>;
-  }
-=======
->>>>>>> 848a8b09cde704320822f56616c143d36610fb13
 
   return (
     <>
@@ -93,9 +39,7 @@ const productDetail = ({ products }) => {
       <div className="flex justify-center items-center mt-40 ">
         <div className="flex flex-row items-center border-2 rounded-lg w-3/4 mx-auto h-96 overflow-hidden">
           <div className="">
-            <div className="flex flex-row items-center absolute top-48 right-60">
-<<<<<<< HEAD
-              
+            <div className="flex flex-row items-center absolute top-48 right-60">             
               <span className="m-10">
                 {products.likes === 0 ? (
                   <CiHeart
@@ -110,10 +54,9 @@ const productDetail = ({ products }) => {
                   />
                 )}
               </span>
-=======
+
               <h1>likes</h1>
               <CiHeart className="ml-2 text-2xl" />
->>>>>>> 848a8b09cde704320822f56616c143d36610fb13
             </div>
           </div>
           <div className="ml-10">

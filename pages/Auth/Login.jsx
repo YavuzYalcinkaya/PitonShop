@@ -8,11 +8,11 @@ import { useRouter } from "next/router";
 
 const Login = () => {
   const router = useRouter();
-  const removeToken = () => {
-    if (typeof window !== "undefined") {
-      window.localStorage.removeItem("token");
-    }
-  };
+  // const removeToken = () => {
+  //   if (typeof window !== "undefined") {
+  //     window.localStorage.removeItem("token");
+  //   }
+  // };
 
   const loginHandler = () => {
     axios
@@ -132,7 +132,7 @@ const Login = () => {
             </p>
             <p>Forgot Password</p>
           </div>
-          <div onClick={() => removeToken()}>removetoken</div>
+          {/* <div onClick={() => removeToken()}>removetoken</div> */}
         </form>
       </div>
     </div>

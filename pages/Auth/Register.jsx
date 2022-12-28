@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FaUser } from "react-icons/fa";
-import { CiMail } from "react-icons/ci";
+import { VscMail } from "react-icons/vsc";
 import { BsFillLockFill } from "react-icons/bs";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -42,7 +42,7 @@ const Register = ({}) => {
           .max(20, "Must be 20 characters or more")
           .matches(
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/,
-            "One Uppercase, One Lowercase, One Number and One Special Case Character"
+            "Şifrenizde 1 büyük harf, 1 küçük harf, 0-9 arasında bir rakam, ve bir adet özel karakter olmalıdır."
           ),
         confirmPassword: Yup.string()
           .required()
@@ -72,7 +72,7 @@ const Register = ({}) => {
         );
 
         if (response.status == 200 && typeof window !== "undefined") {
-          alert("Kayıt Başarılı");
+          // alert("Kayıt Başarılı");
           window.localStorage.setItem("token", response.data.token);
            router.push("/products");
         }
@@ -86,9 +86,6 @@ const Register = ({}) => {
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 h-screen w-full">
-      {/* <div>
-        {JSON.stringify(sample)}
-      </div> */}
       <div className="bg-gradient-to-t from-blue-900 via-blue-800 to-blue-500 w-full h-full">
         <div className="flex flex-col items-center mt-80 mr-60">
           <h3 className="text-white text-4xl font-bold">PitonShop</h3>
@@ -119,7 +116,7 @@ const Register = ({}) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <FaUser className="relative -top-10 left-4 " />
+              <FaUser className="relative -top-10 left-4 " color="lightgray" />
               {errors.name && touched.name ? (
                 <p className="text-red-500 ml-10">{errors.name}</p>
               ) : null}
@@ -134,7 +131,7 @@ const Register = ({}) => {
               value={values.email}
               onChange={handleChange}
             />
-            <CiMail className=" text-xl relative -top-10 left-4" />
+            <VscMail className=" text-xl relative -top-10 left-4" color="lightgray" />
             {errors.email && touched.email ? (
               <p className="text-red-500 ml-10">{errors.email}</p>
             ) : null}
@@ -149,7 +146,7 @@ const Register = ({}) => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            <BsFillLockFill className=" text-xl relative -top-10 left-4" />
+            <BsFillLockFill className=" text-xl relative -top-10 left-4" color="lightgray" />
             {errors.password && touched.password ? (
               <p className="text-red-500 ml-10">{errors.password}</p>
             ) : null}

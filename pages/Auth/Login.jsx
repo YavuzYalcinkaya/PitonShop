@@ -1,5 +1,5 @@
 import React from "react";
-import { CiMail } from "react-icons/ci";
+import { VscMail } from "react-icons/vsc";
 import { BsFillLockFill } from "react-icons/bs";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -30,7 +30,7 @@ const Login = () => {
         );
 
         if (response.status == 200 && typeof window !== "undefined") {
-          alert("Giriş Başarılı");
+          // alert("Giriş Başarılı");
           window.localStorage.setItem("token", response.data.token);
           router.push("/products");
         } else {
@@ -100,7 +100,7 @@ const Login = () => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            <CiMail className=" text-xl relative -top-10 left-4" />
+            <VscMail className=" text-xl relative -top-10 left-4" color="lightgray" />
             {errors.email && touched.email ? (
               <p className="text-red-500 ml-10">{errors.email}</p>
             ) : null}
@@ -115,7 +115,7 @@ const Login = () => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            <BsFillLockFill className=" text-xl relative -top-10 left-4" />
+            <BsFillLockFill className=" text-xl relative -top-10 left-4" color="lightgray" />
             {errors.password && touched.password ? (
               <p className="text-red-500 ml-10">{errors.password}</p>
             ) : null}

@@ -1,3 +1,10 @@
+#Screenshoots
+
+1- <img src="./Screenshots/register.png">
+2- <img src="./Screenshots/login.png">
+3- <img src="./Screenshots/product.png">
+4- <img src="./Screenshots/p_detail.png">
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

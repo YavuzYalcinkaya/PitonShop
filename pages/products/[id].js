@@ -54,9 +54,6 @@ const productDetail = ({ products }) => {
                   />
                 )}
               </span>
-
-              <h1>likes</h1>
-              <CiHeart className="ml-2 text-2xl" />
             </div>
           </div>
           <div className="ml-10">
